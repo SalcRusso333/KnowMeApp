@@ -20,7 +20,7 @@ function MealsOverviewScreen({ route }){
     }
     return(
         <View style={styles.container}>
-            <Text>Meals Overview - {{catId}}</Text>
+            <Text>Meals Overview - {catId}</Text>
             <FlatList
                 data={displayedMeals}
                 keyExtractor={(item) => item.id}

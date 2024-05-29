@@ -4,7 +4,7 @@ function MealItem({ title }){
     return(
         <View>
             <Text>
-                {{ title }}
+                { title }
             </Text>
         </View>
     )
