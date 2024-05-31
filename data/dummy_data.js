@@ -2,9 +2,10 @@ import Category from '../models/category';
 import Profile from '../models/profile';
 
 export const CATEGORIES = [
+  //Aquí el color del boton, al final
   new Category('tess', 'Tess Miranda', '#FFF000'),
   new Category('alexis', 'Cristian Alexis', '#00FF00'),
-  new Category('angel', 'Angel Gabriel', '#000000'),
+  new Category('angel', 'Angel Gabriel', '#4C2882'),
   new Category('pamela', 'Pamela', '#FFFFFF'),
   new Category('angulo', 'Jose Luis', '#000000')
   /*new Category('c1', 'Italian', '#f5428d'),
@@ -20,6 +21,7 @@ export const CATEGORIES = [
 ];
 
 export const PROFILES = [
+  //Si necesitas mas colores, no dudes en añadirlos en el arreglo al final de cada perfil
 
   new Profile(
     '333',
@@ -28,7 +30,8 @@ export const PROFILES = [
     require('../assets/tess.jpg'),
     'Hola soy Tess, soy la hija de enmedio de una familia de 5 personas, tengo una hermana mayor y un hermano menor, mi padre se llama Ricardo y Mi madre se llama Judith. Me gusta la música clásica, los videojuegos de aventura, las historias de acción, la música viejita de los 1900s, Las piñas, los patos y hacer arte. Se hablar masomenos Ingles y me interesa aprender a hablar Francés.',
     'Amarillo patito',
-    '20 de Junio de 2006'
+    '20 de Junio de 2006',
+    ['#FFF000', '#F7FD04', '#F9B208', '#F98404', '#FC5404']
   ),
   new Profile(
     '27',
@@ -37,32 +40,38 @@ export const PROFILES = [
     require('../assets/alexis.jpg'),
     'Soy Cristian Alexis. Pero prefiero que me digan Alexis, tengo 17 años, apunto de cumplir 18, soy un estudiante del CBTis No. 116, yo SI elegí la especialidad de programación porque me gusta programar, desde los 12 años me encanta el desarrollo, tanto de software útil como de videojuegos, ¿qué me gusta?, la pizza, me gustan los videojuegos de acción y aventura, me gusta jugar juegos como; WoT Blitz, TF2, Metal Slug, y he jugado videojuegos de Playstation, y Game Boy, etc. si no estoy viendo videos, estoy jugando videojuegos o desarrollando algún proyecto, sea interactivo, literario, o visual. Cuando se habla de postres no me gusta prácticamente nada, pero cuando se habla de hojaldre allí si me agrada. Estoy aprendiendo Italiano.',
     'Verde Neon(acción turbo)',
-    '27 de Junio de 2006'
+    '27 de Junio de 2006',
+    ['#00FF00', '#F0FF42', '#82CD47', '#54B435', '#379237']
   ),
   new Profile(
     'id',
     ['angel'],
     'Hernandez Balaguer Angel Gabriel',
-    'image',
-    'Biografia',
-    'Ajá'
+    require('../assets/angel.jpg'),
+    'hola soy goku no mentira soy angel, me encantan los videojuegos chidos los que tienen buenos efectos buenos movimientos únicos e increíbles, juegos con mecánicas muy útiles que sean increíbles, me gusta los dibujos bonitos que si están bien dibujados, mi min en el smash ultimate que apenas lo estoy usando en torneos es el pichu, no me gusta estudiar, me gusta hacer lo que quiera, tengo dos mejores amigos increíbles, me gustan las sopas de letras, no me gusta mucho comer sopa, mi laptop es lo que me mantiene cuerdo, mi laptop es la mejor consola que he tenido con ella puedo hacer muchas cosas osea todo en uno osea premio doble y es todo por que casi me excedo de mucho texto.',
+    'Violeta',
+    '24 Septiembre de 2005',
+    ['#4C2882', '#FF0000', '#93DFFF', '#0012FF', '#CFFF00']
   ),
   new Profile(
-    'id',
+    '19',
     ['pamela'],
     'De La Cruz Galicia Pamela',
     require('../assets/pamela.jpg'),
     'Hola soy Pamela, tengo 18 años y voy ahorita mismo a la preparatoria cbtis 116. Mi color favorito es el negro y blanco, mi comida favorita es la milanesa y me gusta mucho dibujar en digital, me gusta los gatos gordos y obesos, me gusta los videojuegos de terror, por lo general utilizo mucho la aplicaciones Twitch y Twitter y entiendo muy bien el portugues.',
     'Negro y Blanco',
-    '28 de Febrero de 2006'
+    '28 de Febrero de 2006',
+    ['#FFFFFF', '#333333', '#FFFFFF', '#E1F4F3', '#706C71']
   ),
   new Profile(
-    'id',
+    '746',
     ['angulo'],
     'Cristerna Angulo Jose Luis',
-    'image',
-    'Biografia',
-    'Ajá'
+    require('../assets/angulo.jpg'),
+    'Hola soy Jose Luis Cristerna Angulo pero todos me dicen Angulo, tengo 18 años y estoy cursando el 6to semestre en el CBTis 116. Mi color favorito es el morado, mi comida favorita es cualquier tipo de pasta y disfruto mucho de patinar, tengo 2 perros llamados tanke y Doris y mi saga de juegos favoritos es God of War.',
+    'Ajá',
+    '09 de Marzo ',
+    ['#000000']
   )
 
 ];

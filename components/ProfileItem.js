@@ -1,7 +1,10 @@
 import { View, Text, Pressable, Image, Platform, StyleSheet } from "react-native"
 
-function ProfileItem({name, image, bio, favcolor, birth}){
+function ProfileItem({name, image, bio, favcolor, birth, color}){
+    const profileColors = color;
+    console.log('Colores en Items: ', profileColors)
     return(
+        //Utiliza el arreglo profileColors para elegir entre colores
         <View style={styles.profileItem}>
             <Pressable 
                 android_ripple={{ color: '#ccc'}}
@@ -13,12 +16,20 @@ function ProfileItem({name, image, bio, favcolor, birth}){
                             source={image}
                             style={styles.image}
                         />
-                        <Text style={styles.title}>
+                        <Text style={[styles.title, {
+                            //Aqui cambias el color de los nombres
+                        }]}>
                             {name}
                         </Text>
-                        <Text style={styles.title}>Cumpleaños: {birth}</Text>
-                        <Text style={styles.title}>Color favorito: {favcolor}</Text>
-                        <Text>
+                        <Text style={[styles.title, {
+                            //Aquí cambias el cumpleaños
+                        }]}>Cumpleaños: {birth}</Text>
+                        <Text style={[styles.title, {
+                            //Aquí cambias el color favorito
+                        }]}>Color favorito: {favcolor}</Text>
+                        <Text style={[styles.detailItem, {
+                            //Aquí cambias la biografía
+                        }]}>
                             {bio}
                         </Text>
                     </View>
@@ -30,11 +41,10 @@ function ProfileItem({name, image, bio, favcolor, birth}){
 export default ProfileItem
 
 const styles = StyleSheet.create({
-    mealItem: {
+    profileItem: {
         margin: 16,
         borderRadius: 8,
         overflow: Platform.OS === 'android' ? 'hidden' : 'visible',
-        backgroundColor:'white',
         elevation: 4,
         shadowColor: 'black',
         shadowOpacity: 0.25,

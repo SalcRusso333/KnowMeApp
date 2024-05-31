@@ -6,7 +6,8 @@ class Profile {
         image,
         bio,
         favcolor,
-        birth
+        birth,
+        color
     ){
         this.id = id;
         this.categoryIds = categoryIds;
@@ -15,6 +16,7 @@ class Profile {
         this.bio = bio;
         this.favcolor = favcolor;
         this.birth = birth;
+        this.color = color;
     }
 }
 

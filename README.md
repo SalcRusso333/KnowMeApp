@@ -1,1 +1,1 @@
-# MyGoad App
+# KnowMe, app for meet the developers of this application
