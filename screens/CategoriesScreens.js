@@ -7,7 +7,7 @@ function CategoriesScreen({navigation}) {
 
     function renderCategoryItem(itemData) {
         function pressHandler() {
-            navigation.navigate('MealsOverview' , {
+            navigation.navigate('Profiles' , {
                 categoryId: itemData.item.id
             })
         }
@@ -22,7 +22,6 @@ function CategoriesScreen({navigation}) {
             data={CATEGORIES} 
             keyExtractor={(item) => item.id}
             renderItem={renderCategoryItem}
-            numColumns={2}
         />
     )
 }
