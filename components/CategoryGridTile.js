@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
         flex: 1
     },
     buttonPressed: {
-        opacity: 0.5
+        opacity: 1
     },
     innerContainer: {
         flex: 1,
@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
     },
     title: {
         fontWeight: 'bold',
-        fontSize: 18,
+        fontSize: 30,
     }
 })
 

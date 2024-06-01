@@ -18,17 +18,22 @@ function ProfileItem({name, image, bio, favcolor, birth, color}){
                         />
                         <Text style={[styles.title, {
                             //Aqui cambias el color de los nombres
+                            color: profileColors[1]
                         }]}>
                             {name}
                         </Text>
                         <Text style={[styles.title, {
                             //Aquí cambias el cumpleaños
+                            color: profileColors[2] 
                         }]}>Cumpleaños: {birth}</Text>
                         <Text style={[styles.title, {
                             //Aquí cambias el color favorito
+                            color: profileColors[3]
                         }]}>Color favorito: {favcolor}</Text>
                         <Text style={[styles.detailItem, {
-                            //Aquí cambias la biografía
+                            color: profileColors[4],
+                            fontSize: 25,
+                            alignContent: 'center'
                         }]}>
                             {bio}
                         </Text>
@@ -60,7 +65,7 @@ const styles = StyleSheet.create({
     },
     image: {
         width: '100%',
-        height: 300
+        height: 300,
     },
     title: {
         fontWeight: 'bold',
