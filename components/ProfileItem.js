@@ -1,6 +1,12 @@
 import { View, Text, Pressable, Image, Platform, StyleSheet } from "react-native"
+import { useNavigation } from "@react-navigation/native";
+import ProfileDetails from "./ProfileDetail";
+function ProfileItem({id, name, image, color, favcolor, birth}){
+    const navigation = useNavigation()
 
-function ProfileItem({name, image, bio, favcolor, birth, color}){
+    function selectProfileHandler(){
+        navigation.navigate('ProfileDetails', {profileId: id})
+    }
     const profileColors = color;
     console.log('Colores en Items: ', profileColors)
     return(
@@ -8,7 +14,8 @@ function ProfileItem({name, image, bio, favcolor, birth, color}){
         <View style={styles.profileItem}>
             <Pressable 
                 android_ripple={{ color: '#ccc'}}
-                style={({ pressed }) => (pressed ? styles.buttonPressed : null) } 
+                style={({ pressed }) => (pressed ? styles.buttonPressed : null)}
+                onPress={selectProfileHandler} 
             >
                 <View>
                     <View>
@@ -22,22 +29,12 @@ function ProfileItem({name, image, bio, favcolor, birth, color}){
                         }]}>
                             {name}
                         </Text>
-                        <Text style={[styles.title, {
-                            //Aquí cambias el cumpleaños
-                            color: profileColors[2] 
-                        }]}>Cumpleaños: {birth}</Text>
-                        <Text style={[styles.title, {
-                            //Aquí cambias el color favorito
-                            color: profileColors[3]
-                        }]}>Color favorito: {favcolor}</Text>
-                        <Text style={[styles.detailItem, {
-                            color: profileColors[4],
-                            fontSize: 25,
-                            alignContent: 'center'
-                        }]}>
-                            {bio}
-                        </Text>
                     </View>
+                    <ProfileDetails
+                        profileColors={profileColors}
+                        favcolor={favcolor}
+                        birth={birth}
+                    />
                 </View>
             </Pressable>
         </View>

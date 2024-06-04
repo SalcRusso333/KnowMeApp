@@ -1,9 +1,10 @@
 import { View, Text, StyleSheet, FlatList } from "react-native";
-import { PROFILES } from "../data/dummy_data";
+import { useLayoutEffect } from "react";
+import { PROFILES, CATEGORIES } from "../data/dummy_data";
 import ProfileItem from "../components/ProfileItem";
 import Profile from "../models/profile";
 
-function ProfilesScreen({ route }) {
+function ProfilesScreen({ route, navigation }) {
     const catId = route.params.categoryId;
     const displayedProfiles = PROFILES.filter((profileItem) => {
         return profileItem.categoryIds.indexOf(catId) >= 0;
@@ -12,16 +13,24 @@ function ProfilesScreen({ route }) {
     const profileColors = displayedProfiles.map(profile => profile.color);
     const flatColors = profileColors.flat() 
 
+    useLayoutEffect(() => {
+        const categoryTitle = CATEGORIES.find((category) => category.id === catId).title
+
+        navigation.setOptions({
+            title: categoryTitle
+        })
+    }, [catId, navigation])
+
     function renderProfileItem(itemData) {
         console.log("Colores: ", profileColors)
         console.log("Color 1: ", profileColors[0][1])
         console.log('colores reducidos: ', flatColors)
         return (
             <ProfileItem
+                id={itemData.item.id}
                 name={itemData.item.name}
                 favcolor={itemData.item.favcolor}
                 image={itemData.item.image}
-                bio={itemData.item.bio}
                 birth={itemData.item.birth}
                 color={itemData.item.color}
             />
