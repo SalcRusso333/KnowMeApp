@@ -16,8 +16,10 @@ export default function App() {
       <StatusBar style='dark' />
       <NavigationContainer>
         <Stack.Navigator 
+        //Aquí cambias el color por default de e status bar
         screenOptions={{
-          headerStyle: { backgroundColor: '#987070'},
+          title: 'Perfiles',
+          headerStyle: { backgroundColor: '#BBBBBB'},
           headerTintColor: 'white',
           contentStyle: { backgroundColor: '#F1E5D1'}
       }}

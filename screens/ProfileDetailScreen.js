@@ -1,12 +1,23 @@
 import { ScrollView, StyleSheet, View, Image, Text } from "react-native"
 import { PROFILES } from "../data/dummy_data"
 import ProfileDetails from "../components/ProfileDetail"
+import { useLayoutEffect } from "react"
+import { useNavigation } from "@react-navigation/native"
 
-function ProfileDetailScreen(route, navigation){
-    console.log(route.route.params)
-    const profileId = route.route.params.profileId
+function ProfileDetailScreen({route}){
+    const navigation = useNavigation();
+    const profileId = route.params.profileId
 
     const selectedProfile = PROFILES.find((profile) => profile.id === profileId)
+
+    useLayoutEffect(() => {
+        //AQUI VAS A ELEGIR EL COLOR DE LA STATUS BAR, cambia el arreglo flatColors de ahí abajo
+        navigation.setOptions({
+            title: 'Detalles',
+            headerStyle: { backgroundColor: selectedProfile.color[1]},
+        })
+    }, [profileId, navigation])
+
     return(
         <ScrollView style={[{
             backgroundColor: selectedProfile.color[0]

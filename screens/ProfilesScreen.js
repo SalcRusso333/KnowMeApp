@@ -16,8 +16,10 @@ function ProfilesScreen({ route, navigation }) {
     useLayoutEffect(() => {
         const categoryTitle = CATEGORIES.find((category) => category.id === catId).title
 
+        //AQUI VAS A ELEGIR EL COLOR DE LA STATUS BAR, cambia el arreglo flatColors de ahí abajo
         navigation.setOptions({
-            title: categoryTitle
+            title: categoryTitle,
+            headerStyle: { backgroundColor: flatColors[1]},
         })
     }, [catId, navigation])
 
