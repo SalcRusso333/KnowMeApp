@@ -15,7 +15,13 @@ export default function App() {
     <>
       <StatusBar style='dark' />
       <NavigationContainer>
-        <Stack.Navigator>
+        <Stack.Navigator 
+        screenOptions={{
+          headerStyle: { backgroundColor: '#987070'},
+          headerTintColor: 'white',
+          contentStyle: { backgroundColor: '#F1E5D1'}
+      }}
+        >
           <Stack.Screen name="ProfilesCategories" component={CategoriesScreen} />
           <Stack.Screen name="Profiles" component={ProfilesScreen} />
           <Stack.Screen name="ProfileDetails" component={ProfileDetailScreen} />
@@ -28,5 +34,6 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
+    
   },
 });

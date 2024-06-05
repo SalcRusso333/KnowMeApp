@@ -31,8 +31,9 @@ function ProfileDetailScreen(route, navigation){
                         </View>
                         <Text style={[styles.detailItem, {
                             color: selectedProfile.color[4],
-                            fontSize: 25,
-                            alignContent: 'center'
+                            fontSize: 18,
+                            paddingLeft:15,
+                            paddingRight: 15
                         }]}>{selectedProfile.bio}</Text>
 
                         
