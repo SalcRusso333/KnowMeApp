@@ -19,7 +19,7 @@ function ProfilesScreen({ route, navigation }) {
         //AQUI VAS A ELEGIR EL COLOR DE LA STATUS BAR, cambia el arreglo flatColors de ahí abajo
         navigation.setOptions({
             title: categoryTitle,
-            headerStyle: { backgroundColor: flatColors[1]},
+            headerStyle: { backgroundColor: flatColors[5]},
         })
     }, [catId, navigation])
 

@@ -14,7 +14,7 @@ function ProfileDetailScreen({route}){
         //AQUI VAS A ELEGIR EL COLOR DE LA STATUS BAR, cambia el arreglo flatColors de ahí abajo
         navigation.setOptions({
             title: 'Detalles',
-            headerStyle: { backgroundColor: selectedProfile.color[1]},
+            headerStyle: { backgroundColor: selectedProfile.color[6]},
         })
     }, [profileId, navigation])
 

@@ -19,7 +19,7 @@ export default function App() {
         //Aquí cambias el color por default de e status bar
         screenOptions={{
           title: 'Perfiles',
-          headerStyle: { backgroundColor: '#BBBBBB'},
+          headerStyle: { backgroundColor: '#CD5C08'},
           headerTintColor: 'white',
           contentStyle: { backgroundColor: '#F1E5D1'}
       }}

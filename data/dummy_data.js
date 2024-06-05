@@ -32,7 +32,7 @@ export const PROFILES = [
     'Amarillo patito',
     '20 de Junio de 2006',
     
-    ['#FFC100', '#FC5404', '#F98404', '#F7FD04', '#FFFF80']
+    ['#FFC100', '#FC5404', '#F98404', '#F7FD04', '#FFFF80', '#FDDE55', '#FCE700']
   ),
   new Profile(
     '27',
@@ -43,7 +43,7 @@ export const PROFILES = [
     'Verde Neon(acción turbo)',
     '27 de Junio de 2006',
     
-    ['#C3FF93', '#82CD47', '#54B435', '#16FF00', '#379237']
+    ['#C3FF93', '#82CD47', '#54B435', '#16FF00', '#379237', '#0A6847', '#3EC70B']
   ),
   new Profile(
     'id',
@@ -53,7 +53,7 @@ export const PROFILES = [
     'Hola soy Goku no mentira soy Angel, me encantan los videojuegos chidos los que tienen buenos efectos buenos movimientos únicos e increíbles, juegos con mecánicas muy útiles que sean increíbles, me gusta los dibujos bonitos que si están bien dibujados, mi min en el smash ultimate que apenas lo estoy usando en torneos es el pichu, no me gusta estudiar, me gusta hacer lo que quiera, tengo dos mejores amigos increíbles, me gustan las sopas de letras, no me gusta mucho comer sopa, mi laptop es lo que me mantiene cuerdo, mi laptop es la mejor consola que he tenido con ella puedo hacer muchas cosas osea todo en uno osea premio doble y es todo por que casi me excedo de mucho texto.',
     'Violeta',
     '24 Septiembre de 2005',
-    ['#050C9C', '#3572EF', '#3ABEF9', '#8F00FF', '#A7E6FF']
+    ['#050C9C', '#3572EF', '#3ABEF9', '#8F00FF', '#A7E6FF', '#03AED2', '#00F5FF']
   ),
   new Profile(
     '19',
@@ -64,7 +64,7 @@ export const PROFILES = [
     'Negro y Blanco',
     '28 de Febrero de 2006',
       
-    ['#151515', '#6D5D6E', '#CDE8E5', '#FBF9F1', '#686D76']
+    ['#151515', '#6D5D6E', '#CDE8E5', '#FBF9F1', '#686D76', '#222831', '#000000']
   ),
   new Profile(
     '746',
@@ -75,7 +75,7 @@ export const PROFILES = [
     'Morado',
     '09 de Marzo ',
     //0 fondo  1 nombres   2 cumple   3 colfav  4 texto
-    ['#26355D', '#AF47D2', '#FF8F00', '#6420AA', '#FFDB00' ]
+    ['#26355D', '#AF47D2', '#FF8F00', '#6420AA', '#FFDB00', '#6F61C0', '#9400FF']
   )
 
 ];
